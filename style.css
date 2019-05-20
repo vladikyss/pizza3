@@ -1,0 +1,758 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.mm-wrap {
+  background-color: #000;
+
+}
+
+.trolley {
+  position: relative;
+  padding-top: 10px;
+}
+
+.trolley img {
+  width: 40px;
+}
+
+.trolley-counter {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: red;
+  color: #fff;
+  position: absolute;
+  top: 8px;
+  right: -5px;
+
+}
+
+.trolley-counter p {
+  text-align: center;
+}
+
+.mobile-menu {
+  background-color: #000;
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  border-bottom: 2px solid #7b7e82;
+  width: 100%;
+  height: 80px;
+}
+
+
+.mobile-menu-scroll {
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 5;
+  transition: 0.35s;
+  border-bottom: 2px solid #000;
+
+}
+
+.logo-mobile {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  letter-spacing: 1px;
+  margin-top: 10px;
+  font-family: 'Oswald', sans-serif;
+}
+
+.logo-click {
+  color: #000;
+}
+
+.mms-click {
+  background-color: #000;
+  color: #fff;
+}
+
+.menu-hamburger {
+  z-index: 99;
+  cursor: pointer;
+}
+
+.menu-hamburger img {
+  width: 45px;
+  margin: 10px 5px 0 0;
+  transition: 0.4s;
+
+}
+
+.menu-toggle-phone {
+  height: 100vh;
+  width: 0;
+  z-index: 2;
+  background-color: #000;
+  left: 100%;
+  top: 79px;
+  position: fixed;
+  transition: 0.5s;
+}
+
+.menu-toggle-phone-active {
+  left: 0;
+  top: 79px;
+  transition: 0.65s;
+  width: 100%;
+  z-index: 10;
+}
+
+.menu-desktop {
+  display: none !important;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 176px;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: #000;
+  border-right: 2px solid #fff;
+}
+
+.menu-desktop h1 {
+  display: none;
+  color: #fff;
+  position: relative;
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+  text-align: center;
+  font-weight: 300;
+  letter-spacing: 1.5px;
+
+  /*  border-bottom: 2px solid #fff;*/
+}
+
+.menu-desktop h1::after {
+  content: "";
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  top: 110px;
+  background: #fff;
+  left: 0;
+  z-index: 101;
+
+
+}
+
+.menu-desktop p {
+  color: #fff;
+}
+
+.menu-list {
+  color: #fff;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  display: none;
+  width: 100%;
+  height: 70%;
+
+
+}
+
+.menu-list-active {
+  display: flex;
+  position: fixed;
+
+}
+
+.menu-list li {
+  width: 100%;
+}
+
+
+.main {
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.pizza-logo {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+
+
+
+}
+
+.pizza-rel {
+  position: relative;
+  z-index: 7;
+}
+
+@keyframes eye-closing {
+  0% {
+    top: 10px;
+  }
+
+  10% {
+    top: 10px;
+  }
+
+  20% {
+    top: 10px;
+  }
+
+  30% {
+    top: 10px;
+  }
+
+  40% {
+    top: 10px;
+  }
+
+  50% {
+    top: 10px;
+  }
+
+  60% {
+    top: 10px;
+  }
+
+  70% {
+    top: 10px;
+  }
+
+  80% {
+    top: 10px;
+  }
+
+  90% {
+    top: 90px;
+  }
+
+  100% {
+    top: 10px;
+  }
+}
+
+.pizza-eye-closed {
+  width: 120px;
+  height: 80px;
+  border-radius: 65%;
+  z-index: -2;
+  background-color: #FCC575;
+  position: absolute;
+  top: 10px;
+  left: 104px;
+  overflow: hidden;
+  animation: eye-closing 4s infinite;
+  animation-delay: 4s;
+
+}
+
+.eye {
+  position: absolute;
+  top: 95px;
+  left: 146px;
+  ;
+  z-index: 3;
+
+}
+
+@keyframes arrow-move {
+  0% {
+    padding-bottom: 0px;
+  }
+
+  50% {
+    padding-top: 30px;
+  }
+
+  100% {
+    padding-bottom: 0px;
+  }
+}
+
+.arrow {
+  transform: rotate(180deg);
+  width: 50px;
+  margin: 25px auto;
+  animation: arrow-move 2s infinite;
+  position: absolute;
+  bottom: 5px;
+  left: calc(50% - 25px);
+}
+
+.veg {
+  position: absolute;
+  display: none;
+}
+
+.gr1 {
+  width: 65px;
+}
+
+.gr2 {
+  width: 75px;
+}
+
+.veg1 {
+  top: 140px;
+  left: 32%;
+}
+
+.veg2 {
+  top: 280px;
+  left: 26%;
+}
+
+.veg3 {
+  top: 430px;
+  left: 25%;
+}
+
+.veg4 {
+  top: 660px;
+  left: 33%;
+}
+
+.veg5 {
+  top: 370px;
+  left: 68%;
+}
+
+.veg6 {
+  top: 40px;
+  left: 47%;
+}
+
+.veg7 {
+  top: 690px;
+  left: 59%;
+}
+
+.veg8 {
+  top: 550px;
+  left: 67%;
+}
+
+.veg9 {
+  top: 120px;
+  left: 60%;
+}
+
+
+.wrapper-products {
+  width: 100%;
+  height: 700px;
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: 470px;
+  grid-gap: 100px;
+  padding-top: 20px;
+}
+
+.item {
+  margin: 0 10px;
+  margin-top:
+}
+
+.item-img img {
+  margin: 0 auto;
+  display: block;
+  width: 223px;
+}
+
+.info-name {
+  text-align: center;
+  font-family: 'Source Serif Pro', serif;
+  text-transform: capitalize;
+  margin: 20px auto;
+}
+
+.item-description {
+  text-align: center;
+  line-height: 1.25em;
+  padding: 2px 8px;
+  margin-bottom: 25px;
+  color: #363638;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.item-extra-info {
+  color: #5e5e5e;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 0.9em;
+
+}
+
+.size-price-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: #5e5e5e;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.2em;
+  margin-bottom: 6px;
+
+}
+
+.first-price {
+  position: relative;
+}
+
+.first-price p {
+  display: inline-block;
+  font-size: 1.25em;
+  font-weight: 200;
+  color: #000;
+  margin-top: -5px;
+}
+
+.first-price:before {
+  content: "";
+  width: 32px;
+  height: 1.2px;
+  background: #000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-95%, -50%) rotate(-28deg);
+}
+
+.order-bar {
+  height: 72px;
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  display: flex;
+}
+
+.order-bar button {
+  color: #fff;
+  background-color: #000;
+  flex-basis: 70%;
+  height: 100%;
+  font-size: 1.7em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+button img {
+  width: 40px;
+  transform: rotate(90deg);
+  padding: 0 5px;
+}
+
+.counter {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  font-size: 15px;
+  width: 30%;
+  font-size: 1.6em;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.counter::-webkit-inner-spin-button,
+.counter::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.btns-val {
+  display: flex;
+  flex-direction: column;
+}
+
+.add,
+.remove {
+  border-bottom: 1px solid white;
+  height: 50%;
+  width: 40px;
+  cursor: pointer;
+}
+
+.add {
+  position: relative;
+}
+
+.add::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+.remove {
+  position: relative;
+}
+
+.remove::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+.location,
+.phone,
+.about {
+  animation: menu-img 1s normal;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+
+}
+
+.location-img,
+.phone-img,
+.chef-animation {
+  width: 70px;
+  transition: 0.3s;
+  margin: 0 auto 20px auto;
+
+}
+
+.location-img:hover {
+  transform: scale(1.3);
+  transition: 0.3s;
+}
+
+
+.location-address {
+  opacity: 0;
+}
+
+.phone-img {
+  transition: 0.5s;
+}
+
+.phone-img:hover {
+  transform: rotate(360deg);
+
+}
+
+.menu-text {
+  opacity: 0;
+  transition: 1s;
+}
+
+.menu-text-vis {
+  opacity: 1;
+  transition: 1s;
+}
+
+
+.chef-animation:hover {
+  animation: chef-hover 1s;
+}
+
+@keyframes chef-hover {
+
+  33% {
+    transform: rotate(45deg);
+  }
+
+  66% {
+    transform: rotate(-45deg);
+  }
+
+  100% {
+    transform: rotate(0)
+  }
+}
+
+@keyframes menu-img {
+  0% {
+    transform: rotate(45deg);
+  }
+
+  50% {
+    transform: rotate(60deg);
+  }
+
+  100% {
+    transform: rotate(0);
+  }
+}
+
+@keyframes menu-img-landscape {
+  0% {
+    transform: rotate(45deg) scale(0.9);
+  }
+
+  50% {
+    transform: rotate(60deg) scale(0.9);
+  }
+
+  100% {
+    transform: rotate(0) scale(0.9);
+  }
+}
+
+
+
+/*media queries*/
+
+@media only screen and (min-width: 600px) {
+  .wrapper-products {
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 120px;
+    grid-column-gap: 10px;
+  }
+
+  .pizza-logo {
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+
+  .arrow {
+    width: 40px;
+    margin: 4px auto;
+  }
+
+}
+
+
+/*media queries*/
+
+@media only screen and (max-width: 570px) and (max-height: 420px) and (orientation: landscape) {
+  .pizza-logo {
+    transform: translate(-50%, -50%) scale(0.4);
+  }
+
+  .arrow {
+    width: 25px;
+    left: calc(50%+25px);
+  }
+}
+
+
+@media only screen and (min-width: 768px) {
+  .wrapper-products {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .pizza-logo {
+    transform: translate(-50%, -50%) scale(1.1);
+
+  }
+
+  .arrow {
+    width: 45px;
+    bottom: 70px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (orientation: landscape) and (max-width: 900px) and (max-height: 420px) {
+  .pizza-logo {
+    transform: translate(-50%, -50%) scale(0.65);
+    margin-top: 15px;
+    */
+  }
+
+  .arrow {
+    width: 30px;
+    bottom: 0;
+  }
+}
+
+@media only screen and (max-height: 420px) and (orientation: landscape) {
+  .menu-list {
+    height: 70%;
+    align-content: space-between;
+    flex-direction: row;
+  }
+
+
+  .text-par {
+    animation: menu-img-landscape 1s normal;
+    transform: scale(0.9);
+  }
+
+  .location {
+    order: 2;
+  }
+
+  .about {
+    order: 3;
+  }
+
+}
+
+
+@media only screen and (min-width : 1224px) {
+  .main {
+    height: 100vh;
+  }
+
+  .menu-desktop {
+    display: flex !important;
+    z-index: 100;
+
+  }
+
+  .menu-desktop h1 {
+    display: block;
+  }
+
+  .menu-desktop img {
+    width: 70px;
+  }
+
+  .trolley {
+    animation: menu-img 1s normal;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+
+  }
+
+  .trolley img {
+    margin: 0 auto;
+  }
+
+  .trolley-counter {
+    right: 45px;
+  }
+
+  .veg {
+    display: block;
+  }
+
+}
